@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_for(resource)
-    main_page_path
+    root_path
   end
 
   protected

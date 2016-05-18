@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  resources :users, only: [:show]
+
   root 'welcome#main_page'
 
   # The priority is based upon order of creation: first created -> highest priority.
