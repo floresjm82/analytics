@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'bootstrap'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'figaro'
 
@@ -66,7 +66,7 @@ group :development, :test do
 
   gem 'devise', '~> 3.5.6'
 
-  gem 'bootstrap-sass', '~> 3.3.6'
+  
 
 end
 

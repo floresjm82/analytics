@@ -1,0 +1,21 @@
+<h1>List of Registered Applications</h1>
+
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>URL</th>
+  </tr>
+  
+    <% @registered_applications.each do |app| %>
+    <tr>
+      <td><%= app.id %></td>
+      <td><%= link_to app.name, app %></td>
+      <td><%= app.url %></td>
+     </tr>
+    <% end %>
+ 
+</table>
+<br>
+
+<%= link_to 'New', new_registered_application_path %>
