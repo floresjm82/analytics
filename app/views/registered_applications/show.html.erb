@@ -1,0 +1,13 @@
+<h1><%= @registered_application.name %></h1>
+
+<table class="table">
+<tr>
+  <td><%= @registered_application.id %></td>
+  <td><%= @registered_application.name %></td>
+  <td><%= @registered_application.url %></td>
+  <td><%= link_to "Edit", edit_registered_application_path(@registered_application) %>
+  <td><%= link_to "Delete", @registered_application, method: :delete %>
+</tr>
+</table>
+
+
