@@ -13,6 +13,7 @@ class RegisteredApplicationsController < ApplicationController
   def show
 
     @events = @registered_application.events.group_by(&:name)
+    Rails.logger.info ">>>> events: #{@events.inspect}"
 
   end
 
@@ -55,7 +56,6 @@ class RegisteredApplicationsController < ApplicationController
   end
 
   def destroy
-
 
     if @registered_application.destroy
       flash[:notice] = "\'#{@registered_application.name}\' was deleted successfully."

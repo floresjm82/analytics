@@ -1,13 +1,23 @@
 <h1><%= @registered_application.name %></h1>
 
 <table class="table">
-<tr>
-  <td><%= @registered_application.id %></td>
-  <td><%= @registered_application.name %></td>
-  <td><%= @registered_application.url %></td>
-  <td><%= link_to "Edit", edit_registered_application_path(@registered_application) %>
-  <td><%= link_to "Delete", @registered_application, method: :delete %>
-</tr>
+  <tr>
+    <td><%= @registered_application.name %></td>
+    <td><%= @registered_application.url %></td>
+    <td><%= link_to "Edit", edit_registered_application_path(@registered_application) %>
+    <td><%= link_to "Delete", @registered_application, method: :delete %>
+  </tr>
+  <% @events.each do |event| %>
+    <tr>
+      <td colspan="4"><%= event.first %> - <%= event.second.count %></td>
+    </tr>
+    <% if false # event.second.each do |e| %>
+      <tr>
+        <td colspan="4"><%= e.name %></td>
+      </tr>
+    <% end %>
+  <% end %>
+
 </table>
 
 
